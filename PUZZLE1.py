@@ -1,9 +1,8 @@
 from pynfc import Nfc, Desfire, Timeout
-
+n = Nfc("pn532_uart:/dev/ttyS0:115200")
 class Rfid:
-
     def __init__(self):
-            n = Nfc("pn532_uart:/dev/ttyS0:115200")
+        n = Nfc("pn532_uart:/dev/ttyS0:115200")
 
     def read_uid532(self):
         for target in n.poll():

@@ -1,10 +1,5 @@
-from pynfc import Nfc, Desfire, Timeout
+from pynfc import Nfc
 n = Nfc("pn532_uart:/dev/ttyS0:115200")
-<<<<<<< HEAD
-=======
-
-
->>>>>>> deb69e433cc2d42a2a4d5c774796668b5d4ebaee
 class Rfid:
     def __init__(self):
         n = Nfc("pn532_uart:/dev/ttyS0:115200")
@@ -14,7 +9,7 @@ class Rfid:
             try:               
                 targetaid = target.uid.decode("ascii").upper()
                 return targetaid
-            except TimeoutException:
+            except:
                 pass
         
         
